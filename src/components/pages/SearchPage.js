@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import Book from '../Book';
 
 import * as BooksAPI from '../../BooksAPI'
 
-class SearchPage extends React.Component {
+import Book from '../Book';
 
+class SearchPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -45,15 +45,15 @@ class SearchPage extends React.Component {
     });
   }
 
-  updateBook = (book, shelf) => {
-    BooksAPI.update(book, shelf)
-    .then(resp => {
-      book.shelf = shelf;
-      this.setState(state => ({
-          books: state.books.filter(b => b.id !== book.id).concat([book])
-      }));
-    });
-  }
+    updateBook = (book, shelf) => {
+        BooksAPI.update(book, shelf)
+        .then(resp => {
+          book.shelf = shelf;
+          this.setState(state => ({
+              books: state.books.filter(b => b.id !== book.id).concat([book])
+          }));
+        });
+      }
 
     render() {
         return (
@@ -69,7 +69,7 @@ class SearchPage extends React.Component {
             <div className="search-books-results">
               <ol className="books-grid">
               {
-                this.state.results.map((item, key) => <Book updateBook={this.props.updateBook} key={key} book={item} />)
+                this.state.results.map((book, key) => <Book updateBook={this.updateBook} book={book} key={key} />)
               }
               </ol>
             </div>

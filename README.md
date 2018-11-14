@@ -5,6 +5,8 @@
 
 This project allowed me to use React. I used the provided starter code obtained from the Udacity repo. I also installed Yarn to install all dependancies. I used React-Router to be able to start the site on my local machine.
 
+I used a walkthrough by Ryan Waite and Udacity as reference with help figuring out how to setup the app. The link is on the Udacity walkthrough page: https://www.diigo.com/outliner/fkkvtl/Udacity-MyReads%3A-My-Reads%3A-Book-Tracking-App-Project-(project-%236)?key=4sfz2eik4g
+
 ### How do I start the application?
 
 I am assuming that Node.js, NPM / Yarn are installed on the machine already.
